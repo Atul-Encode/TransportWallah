@@ -6,6 +6,8 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const errorHandler = require("./middleware/errorMiddleware");
+const bookingRoutes = require("./routes/bookingRoutes");
+
 
 dotenv.config();
 
@@ -20,6 +22,8 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use(errorHandler);
+app.use("/api/bookings", bookingRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 
