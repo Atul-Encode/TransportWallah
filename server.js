@@ -24,7 +24,7 @@ app.use("/api/users", userRoutes);
 app.use(errorHandler);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/vehicles", vehicleRoutes);
-
+app.use("/api/dashboard", require("./routes/dashboardRoutes"));
 
 const PORT = process.env.PORT || 5000;
 
